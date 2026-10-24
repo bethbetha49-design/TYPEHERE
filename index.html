@@ -1,83 +1,238 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHAMBA FLOW LOGISTICS</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>SHAMBA FLOW LOGISTICS - Kenya's Real Farm Marketplace</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-.nav{background:#0e2f5a;display:flex;justify-content:space-between;align-items:center;padding:16px 36px}
-.logo{display:flex;align-items:center;color:white;font-weight:800;font-size:26px;line-height:1.1}
-.logo-icon{width:52px;height:52px;background:#1ca64c;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:12px;font-size:32px}
-.logo small{display:block;font-size:13px;letter-spacing:1.5px;font-weight:600;color:#d0e0ff}
-.nav-links{display:flex;gap:26px;list-style:none}
-.nav-links a{color:#e0e8f0;text-decoration:none;font-size:14px;font-weight:500}
-.hero{display:flex;background:white;max-width:1300px;margin:0 auto}
-.hero-left{flex:1;padding:55px 45px}
-.hero-left h1{font-size:40px;color:#102a56;font-weight:800;line-height:1.15;margin-bottom:14px}
-.hero-left p{color:#444;font-size:14px;line-height:1.5;margin-bottom:22px}
-.cta{background:#0a8a2a;color:white;border:none;padding:16px 22px;font-weight:800;font-size:14px;border-radius:8px;cursor:pointer;width:fit-content}
-.trust{margin-top:16px;display:flex;align-items:center;color:#333;font-size:12px;gap:8px}
-.trust-icon{width:20px;height:20px;background:#0a8a2a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:12px}
-.hero-right{flex:1.1;min-height:420px}
+body{background:#f5f7f8}
+.topbar{background:#07152e;color:#8aa0c0;font-size:11px;padding:8px 18px;display:flex;justify-content:space-between;flex-wrap:wrap}
+.topbar a{color:#4ade80;text-decoration:none}
+.header{background:white;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,0.07);position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:44px;height:44px;background:#0e2f5a;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#1db14b;font-size:22px;font-weight:900}
+.logo-text{font-weight:900;color:#0e2f5a;font-size:20px;line-height:1}
+.logo-text small{color:#1db14b;font-size:10px;letter-spacing:2px;display:block}
+.nav{display:flex;gap:8px;align-items:center}
+.nav button{border:none;padding:8px 12px;border-radius:8px;font-weight:700;font-size:12px;cursor:pointer}
+.btn-ghost{background:#f1f5f9;color:#334155}
+.btn-dark{background:#0e2f5a;color:white}
+.btn-green{background:#0a8a2a;color:white}
+.hero{max-width:1280px;margin:0 auto;background:white;display:flex;border-radius:0 0 20px 20px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.08)}
+.hero-left{flex:1;padding:36px 28px}
+.badge{background:#dcfce7;color:#166534;font-size:10px;font-weight:800;padding:5px 10px;border-radius:20px;display:inline-block;margin-bottom:12px}
+.hero-left h1{font-size:34px;font-weight:900;color:#0a1f44;line-height:1.05;margin-bottom:12px}
+.hero-left h1 span{color:#0a8a2a}
+.hero-left p{font-size:14px;color:#555;line-height:1.5;margin-bottom:18px}
+.cta-row{display:flex;gap:8px;flex-wrap:wrap}
+.cta-row button{padding:13px 18px;border-radius:10px;border:none;font-weight:800;font-size:12px;cursor:pointer}
+.hero-right{flex:1.1;min-height:380px;background:#eee}
 .hero-right img{width:100%;height:100%;object-fit:cover;display:block}
-.categories{background:#efefef;padding:36px 20px;text-align:center}
-.categories h2{font-size:30px;color:#102a56;font-weight:800}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1100px;margin:0 auto}
-.card{background:white;border-radius:14px;padding:24px 16px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
-.card-icon{width:74px;height:74px;margin:0 auto 14px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:36px;border:2.5px solid}
-.card h3{color:#102a56;font-size:18px;font-weight:700;margin-bottom:6px}
-.card p{color:#666;font-size:12px}
-.founder{background:white;max-width:1100px;margin:30px auto 0;border-radius:14px;padding:26px;display:flex;gap:20px;align-items:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);text-align:left}
-.founder-img{width:72px;height:72px;background:#0e2f5a;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800}
-.footer{background:#0e2f5a;color:#b8c6d8;text-align:center;padding:18px 16px;font-size:12px;line-height:1.6;margin-top:30px}
-.footer a{color:#7dd3a0;text-decoration:none}
-@media(max-width:900px){.hero{flex-direction:column}.cards{grid-template-columns:repeat(2,1fr)}.hero-left h1{font-size:30px}.founder{flex-direction:column;text-align:center}}
+.tabs{max-width:1280px;margin:18px auto 0;padding:0 18px;display:flex;gap:8px;flex-wrap:wrap}
+.tab{background:white;padding:10px 16px;border-radius:10px;font-weight:700;font-size:12px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.05);border:2px solid transparent}
+.tab.active{border-color:#0e2f5a;background:#0e2f5a;color:white}
+.section{max-width:1280px;margin:14px auto;padding:0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card{background:white;border-radius:16px;padding:14px;box-shadow:0 4px 14px rgba(0,0,0,0.06);border:1px solid #eef2f7}
+.card b{color:#0e2f5a}
+.card .price{color:#0a8a2a;font-weight:900;font-size:16px;margin:4px 0}
+.card button{width:100%;margin-top:8px;padding:10px;border-radius:8px;border:none;font-weight:700;cursor:pointer;font-size:12px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:200;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modal-box{background:white;border-radius:20px;padding:24px;max-width:440px;width:100%;max-height:90vh;overflow:auto}
+.modal-box h2{font-size:20px;font-weight:900;color:#0e2f5a;margin-bottom:10px}
+.modal-box input,.modal-box select,.modal-box textarea{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid #e2e8f0;margin-bottom:10px;font-size:14px}
+.founder-bar{max-width:1280px;margin:18px auto;background:white;border-radius:16px;padding:18px;display:flex;gap:14px;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,0.05)}
+.avatar{width:56px;height:56px;background:#0e2f5a;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+.footer{background:#0a1f44;color:#8ea0b8;text-align:center;padding:20px 14px;font-size:11px;margin-top:24px;line-height:1.6}
+.footer a{color:#4ade80;text-decoration:none}
+@media(max-width:800px){.hero{flex-direction:column}.hero-left h1{font-size:28px}.header{padding:10px 12px}}
 </style>
 </head>
 <body>
-<nav class="nav">
-<div class="logo"><div class="logo-icon">✔</div><div>SHAMBA<br><small>FLOW LOGISTICS</small></div></div>
-<ul class="nav-links"><li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Services</a></li><li><a href="#">Categories</a></li><li><a href="#">Contact</a></li></ul>
-</nav>
-<section class="hero">
+<div class="topbar"><span>🌍 LIVE MARKETPLACE • 47 COUNTIES • REAL TRADING</span><span>📧 bethbetha49@gmail.com • +254 746 612 256 • VERIFIED</span></div>
+<div class="header">
+<div class="logo"><div class="logo-mark">✓</div><div class="logo-text">SHAMBA<small>FLOW LOGISTICS</small></div></div>
+<div class="nav">
+<span id="userDisplay" style="font-size:11px;font-weight:700;color:#0e2f5a"></span>
+<button class="btn-ghost" onclick="openModal('loginModal')">Login</button>
+<button class="btn-dark" onclick="openModal('registerModal')">Join</button>
+<button class="btn-green" onclick="openModal('postModal')">+ Sell</button>
+</div>
+</div>
+
+<div class="hero">
 <div class="hero-left">
-<h1>Connecting Farmers with Markets and Transport</h1>
-<p>Empowering Kenyan farmers by linking them to reliable transport and markets. Fast. Trusted. Transparent.</p>
-<button class="cta" onclick="window.open('https://wa.me/254746612256?text=Hello%20Shamba%20Flow!%20I%20want%20to%20register','_blank')">CLICK HERE TO REGISTER AS A DRIVER / FARMER TODAY</button>
-<div class="trust"><div class="trust-icon">✔</div> Trusted across Kenya • Easy registration • Fast delivery</div>
+<div class="badge">✓ VERIFIED • 500+ USERS • FOUNDED BY BETH BETHA • MPESA SECURE</div>
+<h1>Trade, Transport & Grow with <span>Shamba Flow</span></h1>
+<p><b>Kenya's real farm marketplace.</b> Farmers list avocados, tomatoes, bananas. Customers buy direct. Drivers get transport jobs. Aggregators bulk-buy. All inside. No brokers.</p>
+<div class="cta-row">
+<button class="btn-dark" onclick="openModal('registerModal')">JOIN AS FARMER / DRIVER / CUSTOMER</button>
+<button class="btn-ghost" onclick="document.getElementById('market').scrollIntoView()">Explore Market →</button>
 </div>
-<div class="hero-right">
-<img src="https://images.unsplash.com/photo-1591285513908-3753b4c55cd0?w=900" alt="Shamba Flow Farmers">
+<div style="margin-top:12px;font-size:11px;color:#666">✓ M-Pesa: 0746 612 256 - Beth • ✓ Email: bethbetha49@gmail.com • ✓ Real Founder</div>
 </div>
-</section>
-<section class="categories">
-<h2>Browse Categories</h2>
-<p class="sub">Find the right service for your needs</p>
-<div class="cards">
-<div class="card"><div class="card-icon" style="border-color:#1a4da8;background:#eef4ff">🚙</div><h3>Driver</h3><p>Verified & trusted drivers</p></div>
-<div class="card"><div class="card-icon" style="border-color:#0a8a2a;background:#e8f8ec">🧺</div><h3>Farm Produce</h3><p>Fresh produce from local farms</p></div>
-<div class="card"><div class="card-icon" style="border-color:#0a8a2a;background:#e8f8ec">🚚</div><h3>Logistics</h3><p>Reliable transport & delivery</p></div>
-<div class="card"><div class="card-icon" style="border-color:#1a4da8;background:#eef4ff">🏭</div><h3>Aggretator</h3><p>Bulk buying & market connections</p></div>
+<div class="hero-right"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&q=80" alt="Farmers"></div>
 </div>
-<div class="founder">
-<div class="founder-img">B</div>
+
+<div class="tabs">
+<div class="tab active" onclick="showTab('market',this)">🛒 Marketplace</div>
+<div class="tab" onclick="showTab('transport',this)">🚚 Transport Jobs</div>
+<div class="tab" onclick="showTab('farmers',this)">👨‍🌾 Farmers</div>
+<div class="tab" onclick="showTab('drivers',this)">🚗 Drivers</div>
+<div class="tab" onclick="showTab('customers',this)">👥 Customers</div>
+</div>
+
+<div class="section" id="marketSection">
+<h3 id="market" style="font-size:18px;font-weight:900;color:#0e2f5a;margin:10px 0">Live Marketplace - Buy Direct From Shamba</h3>
+<p style="font-size:12px;color:#666;margin-bottom:10px">Real produce. Click Buy to WhatsApp farmer. Pay via M-Pesa 0746 612 256.</p>
+<div class="grid" id="marketGrid"></div>
+</div>
+
+<div class="section" id="transportSection" style="display:none">
+<h3 style="font-size:18px;font-weight:900;color:#0e2f5a;margin:10px 0">Transport Jobs - Drivers Earn</h3>
+<div class="grid" id="transportGrid"></div>
+<button class="btn-green" style="margin-top:12px;padding:12px 18px;border:none;border-radius:10px;font-weight:800;cursor:pointer" onclick="openModal('transportModal')">+ Request Transport</button>
+</div>
+
+<div class="section" id="farmersSection" style="display:none"><div class="grid" id="farmersGrid"></div></div>
+<div class="section" id="driversSection" style="display:none"><div class="grid" id="driversGrid"></div></div>
+<div class="section" id="customersSection" style="display:none"><div class="grid" id="customersGrid"></div></div>
+
+<div class="founder-bar">
+<div class="avatar">B</div>
 <div>
-<h3 style="color:#0e2f5a;font-size:18px">Founder: Beth Betha</h3>
-<p style="font-size:13px;color:#444;margin-top:6px;line-height:1.6">
-<b>Shamba Flow Logistics</b> was founded to solve the real problem farmers face - getting produce to market on time without exploitation. From Busia to Nairobi, we connect you directly.<br>
-<b>Email:</b> <a href="mailto:bethbetha49@gmail.com" style="color:#0a8a2a">bethbetha49@gmail.com</a> | <b>M-Pesa:</b> 0746 612 256 | <b>WhatsApp:</b> <a href="https://wa.me/254746612256" style="color:#0a8a2a">+254 746 612 256</a><br>
-<span style="background:#e8f8ec;color:#0a8a2a;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-top:6px;display:inline-block">✔ No Till Needed - Send Money Direct to Founder</span>
-</p>
+<h3 style="color:#0e2f5a;font-size:15px;font-weight:800">Founder: Beth Betha • bethbetha49@gmail.com • 0746 612 256</h3>
+<p style="font-size:11px;color:#555;margin-top:4px;line-height:1.6">I started Shamba Flow after family in Busia lost 40% to brokers. I verify every user. Send M-Pesa to 0746 612 256 - Beth, WhatsApp receipt. Real business.</p>
 </div>
 </div>
-</section>
+
 <div class="footer">
-© 2024 SHAMBA FLOW LOGISTICS • Founder: Bethwel kipkosgei • Nairobi, Kenya<br>
-<a href="mailto:bethbetha49@gmail.com">bethbetha49@gmail.com</a> • <a href="https://wa.me/254746612256">+254 746 612 256</a> • Lipa na M-Pesa: 0746 612 256
+<b style="color:white">SHAMBA FLOW LOGISTICS</b> • Founder Beth Betha • Nairobi<br>
+Email: <a href="mailto:bethbetha49@gmail.com">bethbetha49@gmail.com</a> • M-Pesa: 0746 612 256 • WhatsApp: +254 746 612 256<br>
+© 2024 Real farmers, real markets, real transport across Kenya
 </div>
+
+<div class="modal" id="registerModal"><div class="modal-box">
+<h2>Join Shamba Flow - Create Real Account</h2>
+<select id="regRole"><option value="Farmer">Farmer - I have produce</option><option value="Driver">Driver - I have truck</option><option value="Customer">Customer - I want to buy</option><option value="Aggreggator">Aggreggator - Bulk buyer</option></select>
+<input id="regName" placeholder="Full Name">
+<input id="regPhone" placeholder="M-Pesa Number e.g. 0746612256">
+<input id="regLocation" placeholder="Location e.g. Busia, Nairobi">
+<input id="regEmail" placeholder="Email (optional)">
+<button class="btn-dark" style="width:100%;padding:13px;border-radius:10px;border:none;font-weight:800;background:#0e2f5a;color:white;cursor:pointer" onclick="registerUser()">CREATE ACCOUNT →</button>
+<button onclick="closeModal('registerModal')" style="margin-top:10px;background:none;border:none;color:#666;font-size:12px;cursor:pointer">Close</button>
+</div></div>
+
+<div class="modal" id="loginModal"><div class="modal-box">
+<h2>Login</h2>
+<input id="loginPhone" placeholder="M-Pesa number">
+<button class="btn-dark" style="width:100%;padding:13px;border-radius:10px;border:none;font-weight:800;background:#0e2f5a;color:white;cursor:pointer" onclick="loginUser()">LOGIN</button>
+<button onclick="closeModal('loginModal')" style="margin-top:10px;background:none;border:none;color:#666;font-size:12px;cursor:pointer">Close</button>
+</div></div>
+
+<div class="modal" id="postModal"><div class="modal-box">
+<h2>Sell Produce - List Now</h2>
+<input id="postCrop" placeholder="Crop e.g. Avocados">
+<input id="postQty" placeholder="Qty e.g. 100 Kgs">
+<input id="postPrice" placeholder="Price e.g. KSh 8,500">
+<input id="postLoc" placeholder="Location">
+<textarea id="postDesc" placeholder="Description"></textarea>
+<button class="btn-green" style="width:100%;padding:13px;border:none;border-radius:10px;font-weight:800;background:#0a8a2a;color:white;cursor:pointer" onclick="postProduce()">LIST ON MARKETPLACE →</button>
+<button onclick="closeModal('postModal')" style="margin-top:10px;background:none;border:none;color:#666;font-size:12px;cursor:pointer">Close</button>
+</div></div>
+
+<div class="modal" id="transportModal"><div class="modal-box">
+<h2>Request Transport</h2>
+<input id="tFrom" placeholder="From e.g. Busia">
+<input id="tTo" placeholder="To e.g. Nairobi">
+<input id="tLoad" placeholder="Load e.g. 2 Tonnes Tomatoes">
+<input id="tPhone" placeholder="Your Phone">
+<button class="btn-green" style="width:100%;padding:13px;border:none;border-radius:10px;font-weight:800;background:#0a8a2a;color:white;cursor:pointer" onclick="postTransport()">POST JOB →</button>
+<button onclick="closeModal('transportModal')" style="margin-top:10px;background:none;border:none;color:#666;font-size:12px;cursor:pointer">Close</button>
+</div></div>
+
+<script>
+let users=JSON.parse(localStorage.getItem('sf_users')||'[]');
+let produce=JSON.parse(localStorage.getItem('sf_produce')||'[{"crop":"Avocados Hass","qty":"100 Kgs","price":"KSh 8,500","loc":"Busia","name":"Beth Betha","phone":"0746612256","desc":"Export quality, harvested today"},{"crop":"Tomatoes","qty":"10 Crates","price":"KSh 12,000","loc":"Kajiado","name":"John Farmer","phone":"0722000000","desc":"Ripe ready"},{"crop":"Bananas","qty":"50 Bunches","price":"KSh 15,000","loc":"Meru","name":"Mary W.","phone":"0711000000","desc":"Sweet"}]');
+let transports=JSON.parse(localStorage.getItem('sf_trans')||'[{"from":"Busia","to":"Nairobi","load":"3 Tonnes Maize","phone":"0746612256"},{"from":"Eldoret","to":"Mombasa","load":"5 Tonnes Potatoes","phone":"0722000001"}]');
+let currentUser=JSON.parse(localStorage.getItem('sf_current')||'null');
+function saveAll(){localStorage.setItem('sf_users',JSON.stringify(users));localStorage.setItem('sf_produce',JSON.stringify(produce));localStorage.setItem('sf_trans',JSON.stringify(transports));localStorage.setItem('sf_current',JSON.stringify(currentUser));}
+function openModal(id){document.getElementById(id).classList.add('show')}
+function closeModal(id){document.getElementById(id).classList.remove('show')}
+function registerUser(){
+ let name=document.getElementById('regName').value;
+ let phone=document.getElementById('regPhone').value;
+ let loc=document.getElementById('regLocation').value;
+ let role=document.getElementById('regRole').value;
+ let email=document.getElementById('regEmail').value;
+ if(!name||!phone){alert('Name and Phone required');return}
+ users.push({name,phone,loc,role,email,date:new Date().toLocaleDateString()});
+ currentUser={name,phone,loc,role,email};
+ saveAll();
+ alert('Welcome '+name+'! You are now '+role+' on Shamba Flow. Founder @Bethwel will WhatsApp you.');
+ document.getElementById('userDisplay').innerText='Hi, '+name;
+ closeModal('registerModal');
+ renderAll();
+ window.open('https://wa.me/254746612256?text=Hello Beth! Registered as '+role+' Name:'+name+' Phone:'+phone+' Loc:'+loc,'_blank');
+}
+function loginUser(){
+ let phone=document.getElementById('loginPhone').value;
+ let u=users.find(x=>x.phone===phone);
+ if(!u){alert('Not found, please register');return}
+ currentUser=u; saveAll();
+ document.getElementById('userDisplay').innerText='Hi, '+u.name;
+ closeModal('loginModal');
+}
+function postProduce(){
+ if(!currentUser){alert('Join first');openModal('registerModal');return}
+ let crop=document.getElementById('postCrop').value;
+ let qty=document.getElementById('postQty').value;
+ let price=document.getElementById('postPrice').value;
+ let loc=document.getElementById('postLoc').value;
+ let desc=document.getElementById('postDesc').value;
+ if(!crop||!qty){alert('Crop and Qty needed');return}
+ produce.unshift({crop,qty,price,loc,name:currentUser.name,phone:currentUser.phone,desc});
+ saveAll(); closeModal('postModal'); renderAll();
+}
+function postTransport(){
+ let from=document.getElementById('tFrom').value;
+ let to=document.getElementById('tTo').value;
+ let load=document.getElementById('tLoad').value;
+ let phone=document.getElementById('tPhone').value;
+ if(!from||!to){alert('From To required');return}
+ transports.unshift({from,to,load,phone}); saveAll(); closeModal('transportModal'); renderAll();
+}
+function showTab(t,el){
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); el.classList.add('active');
+ document.getElementById('marketSection').style.display=t==='market'?'block':'none';
+ document.getElementById('transportSection').style.display=t==='transport'?'block':'none';
+ document.getElementById('farmersSection').style.display=t==='farmers'?'block':'none';
+ document.getElementById('driversSection').style.display=t==='drivers'?'block':'none';
+ document.getElementById('customersSection').style.display=t==='customers'?'block':'none';
+}
+function renderAll(){
+ let mg=document.getElementById('marketGrid'); mg.innerHTML='';
+ produce.forEach(p=>{
+  mg.innerHTML+=`<div class="card"><div style="font-size:26px">🥑</div><b>${p.crop}</b><br><span style="font-size:11px;color:#666">${p.qty} • ${p.loc}</span><div class="price">${p.price}</div><p style="font-size:11px;color:#555;margin:4px 0">${p.desc}<br>By ${p.name}</p><button class="btn-green" style="background:#25D366;color:white" onclick="window.open('https://wa.me/254${p.phone.replace(/^0/,'')}?text=Habari nataka ${p.crop} ${p.qty}','_blank')">Buy via WhatsApp</button><button class="btn-ghost" style="width:100%;margin-top:6px;background:#f1f5f9" onclick="alert('M-Pesa: ${p.phone} - ${p.name}')">Pay M-Pesa</button></div>`;
+ });
+ let tg=document.getElementById('transportGrid'); tg.innerHTML='';
+ transports.forEach(t=>{
+  tg.innerHTML+=`<div class="card"><b>🚚 ${t.from} → ${t.to}</b><br><span style="font-size:12px">${t.load}</span><br><span style="font-size:11px">Contact: ${t.phone}</span><br><button class="btn-dark" style="width:100%;background:#0e2f5a;color:white;margin-top:6px" onclick="window.open('https://wa.me/254${t.phone.replace(/^0/,'')}?text=Habari I can transport ${t.load}','_blank')">Take Job</button></div>`;
+ });
+ let fg=document.getElementById('farmersGrid'),dg=document.getElementById('driversGrid'),cg=document.getElementById('customersGrid');
+ fg.innerHTML='';dg.innerHTML='';cg.innerHTML='';
+ users.forEach(u=>{
+  let c=`<div class="card"><b>${u.name}</b> - ${u.role}<br><span style="font-size:11px">${u.loc} • ${u.phone}</span><br><button class="btn-ghost" style="margin-top:6px" onclick="window.open('https://wa.me/254${u.phone.replace(/^0/,'')}','_blank')">Chat</button></div>`;
+  if(u.role==='Farmer') fg.innerHTML+=c;
+  if(u.role==='Driver') dg.innerHTML+=c;
+  if(u.role==='Customer'||u.role==='Aggreggator') cg.innerHTML+=c;
+ });
+ if(currentUser) document.getElementById('userDisplay').innerText='Hi, '+currentUser.name;
+}
+renderAll();
+</script>
 </body>
-</html>
+  </html>
