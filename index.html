@@ -1,31 +1,74 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shamba Flow Logistics</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>SHAMBA FLOW LOGISTICS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+.nav{background:#0e2f5a;display:flex;justify-content:space-between;align-items:center;padding:18px 40px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;color:white;font-weight:800;font-size:26px;line-height:1.1}
+.logo-check{width:48px;height:48px;background:#1ca64c;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:10px;font-size:30px}
+.logo small{display:block;font-size:14px;letter-spacing:1px;font-weight:600}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:white;text-decoration:none;font-size:15px;font-weight:500}
+.hero{display:flex;background:white;max-width:1280px;margin:0 auto;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.hero-left{flex:1;padding:60px 50px}
+.hero-left h1{font-size:42px;color:#0e2f5a;font-weight:800;line-height:1.15;margin-bottom:16px}
+.hero-left p{color:#333;font-size:15px;line-height:1.5;margin-bottom:26px}
+.cta{background:#0a8a2a;color:white;border:none;padding:18px 24px;font-weight:800;font-size:15px;border-radius:8px;cursor:pointer;line-height:1.3;text-align:left;width:fit-content;box-shadow:0 4px 12px rgba(10,138,42,0.3)}
+.trust{margin-top:18px;display:flex;align-items:center;color:#333;font-size:13px;gap:8px}
+.trust-check{width:22px;height:22px;background:#0a8a2a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:13px}
+.hero-right{flex:1;min-height:420px}
+.hero-right img{width:100%;height:100%;object-fit:cover}
+.categories{background:#eeeeee;padding:40px 20px;text-align:center}
+.categories h2{font-size:32px;color:#0e2f5a;font-weight:800}
+.categories .sub{color:#555;margin:8px 0 30px;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.card{background:white;border-radius:14px;padding:30px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.card:hover{transform:translateY(-4px)}
+.icon-box{width:86px;height:86px;margin:0 auto 18px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:42px;border:3px solid}
+.card h3{color:#0e2f5a;font-size:19px;margin-bottom:8px;font-weight:700}
+.card p{color:#555;font-size:13px}
+.footer{background:#0e2f5a;color:#cbd5e1;text-align:center;padding:16px;font-size:12px}
+@media(max-width:800px){.hero{flex-direction:column}.hero-left{padding:28px 22px}.hero-left h1{font-size:32px}.hero-right{min-height:300px}}
+</style>
 </head>
-<body class="bg-gray-50">
-
-<header class="bg-green-700 text-white p-4 flex justify-between">
-<b>🌱 SHAMBA FLOW</b>
-<a href="https://wa.me/254700000000" class="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs">WhatsApp</a>
-</header>
-
-<section class="bg-green-800 text-white p-6 text-center">
-<h1 class="text-2xl font-black">From Shamba to Door in 2 Hours</h1>
-<p class="mt-2">Fresh from Busia & Eldoret Farmers</p>
-<p class="mt-2 bg-yellow-400 text-black inline-block px-4 py-2 rounded-full font-bold">M-Pesa Till: 123456</p>
+<body>
+<nav class="nav">
+<div class="logo"><div class="logo-check">✔</div><div>SHAMBA<br><small>FLOW LOGISTICS</small></div></div>
+<ul class="nav-links">
+<li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Services</a></li><li><a href="#">Categories</a></li><li><a href="#">Contact</a></li>
+</ul>
+</nav>
+<section class="hero">
+<div class="hero-left">
+<h1>Connecting Farmers with Markets and Transport</h1>
+<p>Empowering Kenyan farmers by linking them to reliable transport and markets. Fast. Trusted. Transparent.</p>
+<button class="cta" onclick="window.open('https://wa.me/254700000000?text=Hello%20Shamba%20Flow!%20I%20want%20to%20register%20as%20Driver/Farmer','_blank')">CLICK HERE TO REGISTER AS A DRIVER<br>/ FARMER TODAY</button>
+<div class="trust"><div class="trust-check">✔</div> Trusted across Kenya • Easy registration • Fast delivery</div>
+</div>
+<div class="hero-right">
+<img src="https://images.unsplash.com/photo-1592985684811-6c0f98adb014?q=80&w=900" alt="Farmers">
+</div>
 </section>
-
-<section class="p-4 grid gap-3">
-<div class="bg-white p-3 rounded-xl shadow"><b>🌽 Maize 90kg - Busia</b><br>Ksh 4,500<br><button class="bg-green-700 text-white px-4 py-2 rounded-full mt-2 w-full">Order on WhatsApp</button></div>
-<div class="bg-white p-3 rounded-xl shadow"><b>🥛 Milk 20L - Eldoret</b><br>Ksh 60/litre<br><button class="bg-green-700 text-white px-4 py-2 rounded-full mt-2 w-full">Order on WhatsApp</button></div>
-<div class="bg-white p-3 rounded-xl shadow"><b>🍅 Tomatoes Crate</b><br>Ksh 2,000<br><button class="bg-green-700 text-white px-4 py-2 rounded-full mt-2 w-full">Order on WhatsApp</button></div>
+<section class="categories">
+<h2>Browse Categories</h2>
+<p class="sub">Find the right service for your needs</p>
+<div class="cards">
+<div class="card"><div class="icon-box" style="border-color:#0e2f5a;background:#eef4ff">🚗</div><h3>Driver</h3><p>Verified & trusted drivers</p></div>
+<div class="card"><div class="icon-box" style="border-color:#0a8a2a;background:#e8f8ec">🥬</div><h3>Farm Produce</h3><p>Fresh produce from local farms</p></div>
+<div class="card"><div class="icon-box" style="border-color:#0a8a2a;background:#e8f8ec">🚚</div><h3>Logistics</h3><p>Reliable transport & delivery</p></div>
+<div class="card"><div class="icon-box" style="border-color:#0e2f5a;background:#eef4ff">🏭</div><h3>Aggretator</h3><p>Bulk buying & market connections</p></div>
+</div>
+<div style="margin-top:50px;background:white;border-radius:12px;padding:30px;max-width:700px;margin:0 auto;box-shadow:0 6px 18px rgba(0,0,0,0.06)">
+<h3 style="color:#0e2f5a;font-size:20px;margin-bottom:10px">Lipa na M-Pesa - No Till Needed!</h3>
+<p style="font-size:14px;color:#444;margin-bottom:16px">Send Money to: <b>07XX XXX XXX - Beth</b> • WhatsApp receipt. Cash on Delivery available.</p>
+<a href="https://wa.me/254700000000" style="display:inline-block;background:#25D366;color:white;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700">Order via WhatsApp</a>
+</div>
 </section>
-
-<footer class="bg-black text-white p-4 text-center text-xs pb-10">Connecting 120+ Farmers | Delivery Ksh 150 | NO 280k fees | Commission 10% after sale</footer>
-
+<div class="footer">© 2024 SHAMBA FLOW LOGISTICS • Nairobi, Kenya • info@shambaflow.co.ke • +254 700 000 000</div>
 </body>
 </html>
