@@ -1,312 +1,360 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHAMBA FLOW LOGISTICS - A Bridge To All Farmers Customers Markets Transport</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Shamba Flow Logistics - Connecting Farmers to Markets</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
-body{background:#f6f8f6}
-.top{background:#07152e;color:#4ade80;padding:8px;text-align:center;font-size:11px;font-weight:800;letter-spacing:.5px}
-.header{background:white;padding:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;box-shadow:0 4px 16px rgba(0,0,0,.06);position:sticky;top:0;z-index:20}
-.logo{font-weight:900;color:#0e2f5a;font-size:20px;line-height:1}
-.logo span{font-size:10px;color:#0a8a2a;display:block;letter-spacing:1px}
-.logo i{font-style:normal;color:#0a8a2a}
-.nav{display:flex;gap:6px;flex-wrap:wrap}
-.nav button{border:none;padding:10px 14px;border-radius:10px;font-weight:800;font-size:11px;cursor:pointer}
-.btn-dark{background:#0e2f5a;color:white}
-.btn-green{background:#0a8a2a;color:white}
-.btn-red{background:#ef4444;color:white}
-.hero{max-width:1150px;margin:0 auto;background:white;padding:20px;border-radius:0 0 18px 18px}
-.bridge{display:flex;align-items:center;justify-content:space-between;gap:8px;background:linear-gradient(90deg,#f0fdf4,#eff6ff,#fefce8);border:2px solid #16a34a;border-radius:16px;padding:14px;margin:14px 0;flex-wrap:wrap}
-.bridge-side{flex:1;min-width:120px;text-align:center;background:white;border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.bridge-center{flex:1.5;min-width:160px;text-align:center}
-.bridge-arrow{font-size:20px;color:#0a8a2a;font-weight:900}
-.pay{background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:10px;font-size:11px;line-height:1.4;margin:10px 0}
-.box{background:white;margin:10px;border-radius:14px;padding:14px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.box h2{font-size:16px;font-weight:900;color:#0e2f5a;margin-bottom:8px}
-input,select,textarea{width:100%;padding:12px;border:2px solid #e2e8f0;border-radius:10px;margin-bottom:8px;font-size:13px}
-button{width:100%;padding:13px;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer}
-.file{width:100%;padding:16px;background:#fffbeb;border:3px dashed #0a8a2a;border-radius:12px;font-weight:800;display:block}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding:12px;max-width:1150px;margin:0 auto}
-.card{background:white;border-radius:16px;padding:12px;box-shadow:0 4px 12px rgba(0,0,0,.06);border:1px solid #eef2ee;position:relative}
-.card img{width:100%;height:170px;object-fit:cover;border-radius:10px;margin-top:20px}
-.price{color:#0a8a2a;font-weight:900;font-size:16px}
-.badge{position:absolute;top:8px;left:8px;color:white;font-size:9px;padding:4px 8px;border-radius:20px;font-weight:800}
-.filters{max-width:1150px;margin:12px auto 0;padding:0 12px;display:flex;gap:6px;flex-wrap:wrap}
-.filters button{border:1.5px solid #ddd;background:white;padding:8px 12px;border-radius:20px;font-size:11px;font-weight:800;width:auto;cursor:pointer}
-.filters button.active{background:#0e2f5a;color:white;border-color:#0e2f5a}
-.footer{background:#0a1f44;color:#8ea0b8;text-align:center;padding:14px;font-size:10px;line-height:1.5}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f8faf8;color:#1a2a1a}
+.top{background:#052e16;color:#86efac;text-align:center;padding:8px;font-size:11px;font-weight:700;letter-spacing:.5px}
+.header{background:white;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.06);position:sticky;top:0;z-index:10;flex-wrap:wrap;gap:12px}
+.logo{line-height:1}
+.logo h1{font-size:22px;font-weight:900;color:#052e16;letter-spacing:-.5px}
+.logo h1 span{color:#15803d}
+.logo p{font-size:10px;color:#64748b;font-weight:700;letter-spacing:1.2px;margin-top:2px}
+.hero{max-width:1100px;margin:0 auto;padding:24px 16px}
+.hero-main{background:white;border-radius:20px;padding:24px;border:1px solid #e2e8f0;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.hero-main h2{font-size:32px;font-weight:900;color:#052e16;line-height:1.1}
+.hero-main h2 span{color:#15803d}
+.hero-main .sub{font-size:14px;color:#475569;margin:12px 0;line-height:1.6}
+.scripts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:20px 0}
+.script{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:16px;padding:16px}
+.script h3{font-size:14px;font-weight:900;color:#052e16;margin-bottom:6px}
+.script p{font-size:12px;color:#334155;line-height:1.5}
+.script .num{background:#15803d;color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;margin-bottom:8px}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.role{background:white;border:2px solid #e2e8f0;border-radius:16px;padding:16px;text-align:center}
+.role h4{font-size:13px;font-weight:900;margin:8px 0 4px}
+.role p{font-size:11px;color:#64748b;line-height:1.4}
+.badge{font-size:9px;font-weight:800;padding:4px 10px;border-radius:20px;display:inline-block}
+.pay{background:#052e16;color:white;border-radius:16px;padding:16px;margin:16px 0}
+.pay b{color:#86efac}
+.box{background:white;border-radius:18px;padding:18px;margin:12px auto;max-width:1100px;border:1px solid #e2e8f0;box-shadow:0 4px 16px rgba(0,0,0,.04)}
+.box h2{font-size:18px;font-weight:900;color:#052e16;margin-bottom:12px}
+label{font-size:11px;font-weight:800;color:#334155;display:block;margin:10px 0 4px}
+input,select,textarea{width:100%;padding:13px;border:2px solid #e2e8f0;border-radius:12px;font-size:13px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#15803d}
+button{width:100%;padding:14px;border:none;border-radius:12px;font-weight:900;font-size:13px;cursor:pointer}
+.btn-dark{background:#052e16;color:white}
+.btn-green{background:#15803d;color:white}
+.btn-red{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+.file{width:100%;padding:18px;background:#f0fdf4;border:2.5px dashed #15803d;border-radius:12px;font-weight:800;font-size:12px;cursor:pointer}
+.grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;padding:14px}
+.card{background:white;border-radius:18px;padding:12px;border:1px solid #e2e8f0;box-shadow:0 4px 12px rgba(0,0,0,.04);position:relative}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-top:24px}
+.price{color:#15803d;font-weight:900;font-size:17px;margin:4px 0}
+.filters{max-width:1100px;margin:14px auto 0;padding:0 14px;display:flex;gap:8px;flex-wrap:wrap}
+.filters button{width:auto;padding:9px 14px;border-radius:20px;font-size:11px;font-weight:800;border:1.5px solid #e2e8f0;background:white;cursor:pointer}
+.filters button.active{background:#052e16;color:white;border-color:#052e16}
+.footer{background:#052e16;color:#94a3b8;text-align:center;padding:20px;font-size:11px;line-height:1.6}
 </style>
 </head>
 <body>
 
-<div class="top">SHAMBA FLOW LOGISTICS v9 BRIDGE EDITION • A Bridge To All Farmers Customers Markets Transport Farms • Founder Bethwel • 0746 612 256 • 50 KES REAL ONLY</div>
+<div class="top">SHAMBA FLOW LOGISTICS • CONNECTING FARMERS TO MARKETS • DIRECT • NO BROKERS • FOUNDER BETHWEL • 0746 612 256 • 50 KES REAL ONLY</div>
 
 <div class="header">
-<div class="logo">SHAMBA <i>FLOW</i><br>LOGISTICS<span>A BRIDGE TO ALL • REAL ONLY</span></div>
-<div class="nav">
-<span id="userDisplay" style="font-size:11px;font-weight:800;color:#0e2f5a"></span>
-<button class="btn-dark" onclick="document.getElementById('regBox').scrollIntoView({behavior:'smooth'})">Join 50 KES</button>
-<button class="btn-green" onclick="document.getElementById('postBox').scrollIntoView({behavior:'smooth'})">+ Post Bridge</button>
-<button class="btn-red" onclick="localStorage.clear();location.reload();">Clear Old</button>
+<div class="logo">
+<h1>SHAMBA <span>FLOW</span> LOGISTICS</h1>
+<p>CONNECTING FARMERS TO MARKETS • REAL ONLY</p>
+</div>
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+<span id="userTop" style="font-size:11px;font-weight:800;color:#052e16"></span>
+<button class="btn-dark" style="width:auto;padding:10px 16px" onclick="document.getElementById('reg').scrollIntoView({behavior:'smooth'})">Join Bridge 50 KES</button>
+<button class="btn-red" style="width:auto;padding:10px 12px;font-size:10px" onclick="localStorage.clear();location.reload()">Clear Old Data</button>
 </div>
 </div>
 
 <div class="hero">
-<h1 style="font-size:28px;font-weight:900;line-height:1.1">SHAMBA FLOW LOGISTICS<br><span style="color:#0a8a2a">A Bridge To All</span></h1>
-<p style="font-size:13px;color:#475569;margin:10px 0;line-height:1.5"><b>SHAMBA</b> = Your Farm (Farmers) <b>FLOW</b> = Movement (Transport/Drivers) <b>LOGISTICS</b> = System (Markets/Customers/Farms) - <b>We are the BRIDGE that connects all!</b></p>
+<div class="hero-main">
+<h2>Shamba Flow Logistics<br><span>A Bridge Between Shamba & Market</span></h2>
+<p class="sub">
+<b>Shamba</b> = Your farm where you grow. <b>Flow</b> = Movement from farm to market through trusted drivers. <b>Logistics</b> = The system that connects every farmer to every customer, market, and farm buyer - Direct, no broker taking 40%.
+</p>
 
-<div class="bridge">
-<div class="bridge-side">
-<div style="font-size:24px">🌽</div>
-<b style="font-size:12px">FARMERS</b><br>
-<span style="font-size:10px;color:#475569">Grow Maize, Beans, Avocado, Milk, Vegetables</span><br>
-<span style="font-size:9px;background:#dcfce7;padding:2px 6px;border-radius:10px">SELL HERE</span>
+<div class="scripts">
+<div class="script">
+<div class="num">1</div>
+<h3>SCRIPT 1: SHAMBA - Farmer Grows</h3>
+<p>Farmer in Moi's Bridge, Nakuru, Eldoret grows Maize, Beans, Potatoes, Vegetables, Milk, Avocado. Before: Struggles to find buyer, broker cheats. Now: Posts on Shamba Flow with real photo: "Maize One acre 40000 Nakuru Selling for silage" - All markets see.</p>
 </div>
-<div class="bridge-center">
-<div class="bridge-arrow">⟶ SHAMBA FLOW BRIDGE ⟶</div>
-<div style="font-size:11px;font-weight:800;color:#0e2f5a;margin:6px 0">🚚 DRIVERS = Bridge Pillars<br>Transport Nakuru ↔ Nairobi ↔ All Markets</div>
-<div style="font-size:10px;background:#0e2f5a;color:white;padding:4px 8px;border-radius:20px;display:inline-block">LOGISTICS SYSTEM • 50 KES • 0746 612 256</div>
+<div class="script">
+<div class="num">2</div>
+<h3>SCRIPT 2: FLOW - Driver Moves</h3>
+<p>Driver is the bridge pillar. Posts: "Lorry 7 tonnes Nakuru → Nairobi 15000 per trip - Available daily". Farmer sees driver on same bridge, books direct. No waiting, no broker. Flow of produce from shamba to market.</p>
 </div>
-<div class="bridge-side">
-<div style="font-size:24px">🏪🛒🏞️</div>
-<b style="font-size:12px">MARKETS / CUSTOMERS / FARMS</b><br>
-<span style="font-size:10px;color:#475569">Buy Crops, Buy Shamba Land, Request Food</span><br>
-<span style="font-size:9px;background:#dbeafe;padding:2px 6px;border-radius:10px">BUY HERE</span>
+<div class="script">
+<div class="num">3</div>
+<h3>SCRIPT 3: LOGISTICS - Market Receives</h3>
+<p>Customer, mama mboga, school, hotel, farm buyer posts: "I want 100 bags beans Budget 50000 Nakuru" or "5 acres Moi's Bridge Title Deed 2M". They see farmer posts on same bridge, WhatsApp direct: "Habari, nimeona mahindi yako". Deal closed same day.</p>
+</div>
+<div class="script">
+<div class="num">4</div>
+<h3>SCRIPT 4: THE BRIDGE FEE - Real Only</h3>
+<p>To keep bridge real, not fake, we charge 50 KES M-Pesa to 0746 612 256 Bethwel. You get code QGH123456. This removes fake Brian kiptoo and brokers. Only real farmers with real WhatsApp and real photos stay on bridge. Shamba Lako, Flow Yako!</p>
+</div>
+</div>
+
+<div class="roles">
+<div class="role">
+<div style="font-size:32px">🌽</div>
+<h4>For Farmers</h4>
+<p>Sell crops direct to markets. Post Maize, Beans, Potatoes, Vegetables, Milk with photo. Set price, location. Customers WhatsApp you direct. No broker.</p>
+<span class="badge" style="background:#dcfce7;color:#166534">SELL ON BRIDGE</span>
+</div>
+<div class="role">
+<div style="font-size:32px">🚚</div>
+<h4>For Transport - Bridge Pillars</h4>
+<p>Drivers post vehicle, route, price per trip. Nakuru ↔ Nairobi ↔ Eldoret ↔ Moi's Bridge. Farmers find you on bridge. Daily trips, direct booking.</p>
+<span class="badge" style="background:#dbeafe;color:#1e40af">MOVE ON BRIDGE</span>
+</div>
+<div class="role">
+<div style="font-size:32px">🏪</div>
+<h4>For Markets & Customers</h4>
+<p>Buy direct from farm. Post what you want: 100 bags beans, 50 crates tomatoes, school supply. Farmers see and WhatsApp you. Also find shamba land for sale.</p>
+<span class="badge" style="background:#fef3c7;color:#92400e">BUY ON BRIDGE</span>
+</div>
+<div class="role">
+<div style="font-size:32px">🏞️</div>
+<h4>For Farm Sellers</h4>
+<p>Sell shamba land with Title Deed. Post size, price, location, water, electricity, road access. Farm buyers from markets see on same bridge.</p>
+<span class="badge" style="background:#ffedd5;color:#9a3412">LAND ON BRIDGE</span>
 </div>
 </div>
 
 <div class="pay">
-<b>💳 THE BRIDGE FEE - 50 KES LEGIT - M-Pesa 0746 612 256 - Bethwel</b><br>
-<b>Why 50 KES?</b> To keep bridge real - No brokers, no fake Brian kiptoo, only real farmers & drivers & buyers with real WhatsApp!<br>
-<b>How Bridge Works:</b><br>
-1️⃣ Farmer pays 50 KES → Code QGH123456 → Registers as Farmer → Posts: Maize One acre 40000 Nakuru Silage + real photo<br>
-2️⃣ Customer pays 50 KES → Registers as Customer → Posts: I want 100 bags beans Budget 50000<br>
-3️⃣ Driver pays 50 KES → Registers as Driver → Posts: Lorry 7T Nakuru→Nairobi 15000 per trip - Available daily<br>
-4️⃣ Farm Seller pays 50 KES → Registers as Farm Seller → Posts: 5 acres Nakuru Title Deed 2M Water Electricity<br>
-5️⃣ <b>All see each other on Bridge - WhatsApp direct - No broker taking 40%!</b><br>
-📞 Founder: Bethwel 0746 612 256 • 📧 bethbetha49@gmail.com • Shamba Lako, Flow Yako!
+<b>💳 How To Enter Bridge - 50 KES Real Only</b><br>
+<span style="font-size:12px;line-height:1.6;display:block;margin-top:6px">
+1. M-Pesa 50 KES to <b>0746 612 256 - Bethwel</b> - Get code e.g. QGH123456<br>
+2. Fill registration below - Choose role: Farmer / Customer / Driver / Farm Seller<br>
+3. Post: If Farmer - Maize One acre 40000 Nakuru Silage + real photo. If Driver - Lorry 7T route price. If Customer - I want beans. If Farm Seller - 5 acres Title 2M.<br>
+4. All posts appear on bridge below - Everyone sees - WhatsApp button connects farmer to market direct - No broker!<br>
+<b>Contact Founder Bethwel:</b> 0746 612 256 | bethbetha49@gmail.com | Moi's Bridge, Rift Valley
+</span>
+</div>
+
 </div>
 </div>
 
 <div class="filters">
-<button class="active" onclick="setFilter('all',this)">All Bridge Posts</button>
-<button onclick="setFilter('crop',this)">🌽 Farmers - Crops</button>
-<button onclick="setFilter('customer',this)">🛒 Customers - Want</button>
-<button onclick="setFilter('driver',this)">🚚 Bridge Pillars - Drivers</button>
-<button onclick="setFilter('farm',this)">🏞️ Farms For Sale</button>
+<button class="active" onclick="setF('all',this)">All Bridge</button>
+<button onclick="setF('crop',this)">🌽 Farmers - Crops</button>
+<button onclick="setF('customer',this)">🏪 Customers - Want</button>
+<button onclick="setF('driver',this)">🚚 Drivers - Transport</button>
+<button onclick="setF('farm',this)">🏞️ Farms For Sale</button>
 </div>
 
-<!-- PEOPLE REGISTER - BRIDGE ENTRY -->
-<div class="box" id="regBox">
-<h2>1. Enter The Bridge - People Register Here</h2>
-<p style="font-size:11px;color:#475569;margin-bottom:8px">Choose who you are on the bridge - Farmer side or Market side or Bridge pillar (Driver)</p>
-<select id="regRole">
-<option value="Farmer">🌽 Farmer Side - I Grow & Sell - Maize, Beans, Avocado, Milk - 50 KES</option>
-<option value="Customer">🛒 Market Side - Customer - I Buy & Post What I Want - 50 KES</option>
-<option value="Driver">🚚 Bridge Pillar - Driver - I Transport Nakuru↔Nairobi - 50 KES</option>
-<option value="FarmSeller">🏞️ Farm Seller Side - I Sell Shamba Land - Title Deed - 50 KES</option>
+<div class="box" id="reg">
+<h2>Join The Bridge - People Register - 50 KES</h2>
+<p style="font-size:11px;color:#64748b;margin-bottom:12px">Choose your role on the bridge - Farmer side, Market side, or Bridge pillar (Driver). Real WhatsApp required.</p>
+
+<label>Who are you on the bridge?</label>
+<select id="role">
+<option value="Farmer">🌽 Farmer - I grow & sell crops - Maize, Beans, Milk, Vegetables</option>
+<option value="Customer">🏪 Customer/Market - I buy - I post what I want - 100 bags beans</option>
+<option value="Driver">🚚 Driver - I am bridge pillar - I move produce - Lorry 7T Nakuru→Nairobi</option>
+<option value="FarmSeller">🏞️ Farm Seller - I sell shamba land - 5 acres Title Deed 2M</option>
 </select>
-<input id="regName" placeholder="REAL Full Name - e.g. Bethwel Kipruto - Founder">
-<input id="regPhone" placeholder="REAL WhatsApp - e.g. 0746612256">
-<input id="regLoc" placeholder="Location - e.g. Nakuru, Moi's Bridge, Rift Valley">
-<input id="regCode" placeholder="M-Pesa Code - e.g. QGH123456 - Type any code - 50 KES to 0746 612 256">
-<button class="btn-dark" onclick="doRegister()">ENTER BRIDGE AS THIS ROLE - 50 KES →</button>
-<div id="regMsg" style="font-size:12px;font-weight:800;margin-top:8px;padding:8px;border-radius:8px"></div>
+
+<label>Real Full Name</label>
+<input id="name" placeholder="e.g. Bethwel Kipruto">
+
+<label>Real WhatsApp Number</label>
+<input id="phone" placeholder="e.g. 0746612256">
+
+<label>Your Location</label>
+<input id="loc" placeholder="e.g. Moi's Bridge, Nakuru, Eldoret">
+
+<label>M-Pesa Code - 50 KES to 0746 612 256</label>
+<input id="code" placeholder="e.g. QGH123456 - Type any for testing">
+
+<button class="btn-dark" onclick="register()">Enter Bridge As This Role →</button>
+<div id="regMsg" style="margin-top:10px;padding:10px;border-radius:10px;font-size:12px;font-weight:800"></div>
 </div>
 
-<div class="box" id="loginBox" style="display:none">
-<h2>✅ You Are On The Bridge!</h2>
-<div id="userInfo" style="font-size:12px;font-weight:800;line-height:1.6"></div>
-<button class="btn-dark" style="background:#666;margin-top:8px" onclick="doLogout()">Leave Bridge - Logout</button>
+<div class="box" id="logBox" style="display:none">
+<h2>✅ You Are On The Bridge</h2>
+<div id="uInfo" style="font-size:12px;font-weight:700;line-height:1.7"></div>
+<button class="btn-dark" style="background:#475569;margin-top:10px" onclick="logout()">Leave Bridge</button>
 </div>
 
-<!-- PEOPLE POST IT THERE - BRIDGE POSTS -->
 <div class="box" id="postBox" style="display:none">
-<h2>2. Post On The Bridge - All See You - Bridge Connects All</h2>
-<select id="postType" onchange="switchType()">
-<option value="crop">🌽 Farmer Side: Post Crop - Maize One acre 40000 Nakuru Selling for silage</option>
-<option value="farm">🏞️ Farm Seller Side: Post Farm For Sale - 5 acres Nakuru Title Deed 2M Water Electricity</option>
-<option value="driver">🚚 Bridge Pillar: Post Transport - Lorry 7T Nakuru→Nairobi 15000 Available daily</option>
-<option value="customer">🛒 Market Side: Post Want - I want 100 bags beans Budget 50000 Nakuru</option>
+<h2>Post On The Bridge - All Markets See You</h2>
+
+<label>What do you want to post on bridge?</label>
+<select id="ptype" onchange="switchT()">
+<option value="crop">🌽 Farmer: Post Crop - Maize One acre 40000 Nakuru Selling for silage</option>
+<option value="farm">🏞️ Farm Seller: Post Farm For Sale - 5 acres Nakuru Title Deed 2M</option>
+<option value="driver">🚚 Driver: Post Transport - Lorry 7T Nakuru→Nairobi 15000 per trip</option>
+<option value="customer">🏪 Customer: Post Want - I want 100 bags beans Budget 50000</option>
 </select>
 
-<div id="t_crop">
-<input id="c_crop" placeholder="Crop - e.g. Maize">
-<input id="c_qty" placeholder="Qty - e.g. One acre / 50 bags / 100 crates">
-<input id="c_price" placeholder="Price - e.g. 40000">
-<input id="c_loc" placeholder="Location - e.g. Nakuru, Moi's Bridge">
-<textarea id="c_desc" placeholder="Description - e.g. Selling for silage - Ready now - No broker"></textarea>
+<div id="tcrop">
+<label>Crop Name</label><input id="ccrop" placeholder="Maize">
+<label>Quantity</label><input id="cqty" placeholder="One acre / 50 bags">
+<label>Price KSh</label><input id="cprice" placeholder="40000">
+<label>Location</label><input id="cloc" placeholder="Nakuru">
+<label>Description - Selling for what?</label><textarea id="cdesc" placeholder="Selling for silage - Ready now - No broker"></textarea>
 </div>
 
-<div id="t_farm" style="display:none">
-<input id="f_size" placeholder="Farm Size - e.g. 5 acres">
-<input id="f_price" placeholder="Farm Price - e.g. 2000000">
-<input id="f_loc" placeholder="Farm Location - e.g. Nakuru Lanet, Moi's Bridge">
-<input id="f_title" placeholder="Title Deed - e.g. Yes - Title Deed Available - Freehold">
-<textarea id="f_desc" placeholder="Farm Details - e.g. 5 acres fertile, water, electricity, near tarmac, 2km from road"></textarea>
+<div id="tfarm" style="display:none">
+<label>Farm Size</label><input id="fsize" placeholder="5 acres">
+<label>Farm Price KSh</label><input id="fprice" placeholder="2000000">
+<label>Farm Location</label><input id="floc" placeholder="Nakuru Lanet">
+<label>Title Deed</label><input id="ftitle" placeholder="Yes - Title Deed Available - Freehold">
+<label>Farm Details - Water, Electricity, Road</label><textarea id="fdesc" placeholder="5 acres fertile, water, electricity, near tarmac"></textarea>
 </div>
 
-<div id="t_driver" style="display:none">
-<input id="d_vehicle" placeholder="Vehicle - e.g. Lorry 7 tonnes / Pickup / Canter">
-<input id="d_route" placeholder="Route - e.g. Nakuru → Nairobi / Moi's Bridge → Eldoret → Nairobi">
-<input id="d_price" placeholder="Price per trip - e.g. 15000">
-<textarea id="d_desc" placeholder="Driver Details - e.g. Available daily, call anytime, 2 trips per week"></textarea>
+<div id="tdriver" style="display:none">
+<label>Vehicle Type</label><input id="dveh" placeholder="Lorry 7 tonnes / Pickup">
+<label>Route</label><input id="droute" placeholder="Nakuru → Nairobi / Moi's Bridge → Eldoret">
+<label>Price Per Trip KSh</label><input id="dprice" placeholder="15000">
+<label>Driver Details - Availability</label><textarea id="ddesc" placeholder="Available daily, call anytime"></textarea>
 </div>
 
-<div id="t_customer" style="display:none">
-<input id="cu_want" placeholder="What you want - e.g. 100 bags beans / 50 crates tomatoes">
-<input id="cu_budget" placeholder="Budget - e.g. 50000">
-<input id="cu_loc" placeholder="Your Location - e.g. Nakuru Town">
-<textarea id="cu_desc" placeholder="Details - e.g. I want beans for school - Urgent - Need tomorrow"></textarea>
+<div id="tcustomer" style="display:none">
+<label>What Do You Want?</label><input id="cuwant" placeholder="100 bags beans / 50 crates tomatoes">
+<label>Your Budget KSh</label><input id="cubud" placeholder="50000">
+<label>Your Location</label><input id="culoc" placeholder="Nakuru Town">
+<label>Details - Urgent?</label><textarea id="cudesc" placeholder="I want beans for school - Urgent - Need tomorrow"></textarea>
 </div>
 
-<label style="font-size:12px;font-weight:900;display:block;margin:8px 0 4px">📸 REAL PHOTO - Bridge Needs Real - Tap Below - Works 100%:</label>
-<input type="file" id="postImage" class="file" accept="image/*" onchange="loadPhoto(this)">
-<div id="fName" style="font-size:11px;background:#dcfce7;padding:8px;border-radius:6px;text-align:center;margin-top:6px;font-weight:800">No file chosen - Tap Choose File above - Gallery/Camera - Like Obinna's!</div>
-<img id="preview" style="width:100%;height:200px;object-fit:cover;border-radius:12px;margin-top:8px;display:none;border:3px solid #0a8a2a">
-<div id="fStatus" style="font-size:11px;font-weight:800;text-align:center;margin-top:4px;color:#0a8a2a"></div>
+<label>Real Photo - Bridge Needs Real - Tap To Choose</label>
+<input type="file" id="img" class="file" accept="image/*" onchange="loadImg(this)">
+<div id="fname" style="font-size:11px;background:#f0fdf4;padding:8px;border-radius:8px;text-align:center;margin-top:8px;font-weight:700">No file chosen - Tap above to choose from gallery/camera</div>
+<img id="prev" style="width:100%;height:210px;object-fit:cover;border-radius:12px;margin-top:8px;display:none;border:3px solid #15803d">
+<div id="fstat" style="font-size:11px;font-weight:800;text-align:center;margin-top:4px;color:#15803d"></div>
 
-<button class="btn-green" style="margin-top:10px" onclick="doPost()">POST ON BRIDGE - ALL FARMERS CUSTOMERS MARKETS TRANSPORT SEE →</button>
-<div id="postMsg" style="font-size:12px;font-weight:800;margin-top:8px;padding:8px;border-radius:8px"></div>
+<button class="btn-green" style="margin-top:12px" onclick="post()">Post On Bridge - All Farmers Markets Transport See →</button>
+<div id="postMsg" style="margin-top:10px;padding:10px;border-radius:10px;font-size:12px;font-weight:800"></div>
 </div>
 
 <div class="grid" id="grid"></div>
 
 <div class="footer">
-<b>SHAMBA FLOW LOGISTICS - A BRIDGE TO ALL</b><br>
-🌽 Farmers (Grow) ↔ 🚚 Drivers (Bridge Pillars - Transport) ↔ 🏪 Markets + 🛒 Customers + 🏞️ Farm Buyers (Buy)<br>
-Founder: Bethwel • M-Pesa Bridge Fee 50 KES: 0746 612 256 - Bethwel • bethbetha49@gmail.com • Moi's Bridge, Rift Valley, KE<br>
-SHAMBA = Farm • FLOW = Movement • LOGISTICS = System That Connects All • Shamba Lako, Flow Yako!<br>
-© 2026 Real Only - No Fake Brian Kiptoo - Real Photos - Real WhatsApp - Real Bridge
+<b>SHAMBA FLOW LOGISTICS - A Bridge Between Shamba & Market</b><br>
+🌽 Farmers grow → 🚚 Drivers move (bridge pillars) → 🏪 Markets & Customers buy + 🏞️ Farm Buyers buy land - All on one bridge - Direct WhatsApp - No broker<br>
+Founder Bethwel • M-Pesa 50 KES Bridge Fee: 0746 612 256 • bethbetha49@gmail.com • Moi's Bridge, Rift Valley Province, KE<br>
+Shamba Lako, Flow Yako - Your Farm, Your Flow - Real Only - Real Photos - Real WhatsApp
 </div>
 
 <script>
-let users=JSON.parse(localStorage.getItem('bridge_v9_users')||'[]');
-let posts=JSON.parse(localStorage.getItem('bridge_v9_posts')||'[]');
-let current=JSON.parse(localStorage.getItem('bridge_v9_current')||'null');
-let tempImg=""; let filter='all';
+let users=JSON.parse(localStorage.getItem('shamba_final_users')||'[]');
+let posts=JSON.parse(localStorage.getItem('shamba_final_posts')||'[]');
+let cur=JSON.parse(localStorage.getItem('shamba_final_cur')||'null');
+let tmp=""; let filt='all';
 
-function save(){localStorage.setItem('bridge_v9_users',JSON.stringify(users));localStorage.setItem('bridge_v9_posts',JSON.stringify(posts));localStorage.setItem('bridge_v9_current',JSON.stringify(current));}
-function switchType(){
-  let t=document.getElementById('postType').value;
-  document.getElementById('t_crop').style.display=t==='crop'?'block':'none';
-  document.getElementById('t_farm').style.display=t==='farm'?'block':'none';
-  document.getElementById('t_driver').style.display=t==='driver'?'block':'none';
-  document.getElementById('t_customer').style.display=t==='customer'?'block':'none';
+function save(){localStorage.setItem('shamba_final_users',JSON.stringify(users));localStorage.setItem('shamba_final_posts',JSON.stringify(posts));localStorage.setItem('shamba_final_cur',JSON.stringify(cur));}
+function switchT(){
+let t=document.getElementById('ptype').value;
+document.getElementById('tcrop').style.display=t=='crop'?'block':'none';
+document.getElementById('tfarm').style.display=t=='farm'?'block':'none';
+document.getElementById('tdriver').style.display=t=='driver'?'block':'none';
+document.getElementById('tcustomer').style.display=t=='customer'?'block':'none';
 }
-function loadPhoto(input){
-  let file=input.files[0]; if(!file){document.getElementById('fName').innerText='No file chosen';return;}
-  document.getElementById('fName').innerText='✓ '+file.name+' ('+Math.round(file.size/1024)+' KB)';
-  document.getElementById('fStatus').innerText='⏳ Loading bridge photo...';
-  let r=new FileReader();
-  r.onload=function(e){tempImg=e.target.result;let p=document.getElementById('preview');p.src=tempImg;p.style.display='block';document.getElementById('fStatus').innerText='✅ Photo ready for bridge!';}
-  r.readAsDataURL(file);
+function loadImg(i){
+let f=i.files[0]; if(!f){return;}
+document.getElementById('fname').innerText='✓ '+f.name+' ('+Math.round(f.size/1024)+' KB)';
+document.getElementById('fstat').innerText='Loading...';
+let r=new FileReader(); r.onload=function(e){tmp=e.target.result;let p=document.getElementById('prev');p.src=tmp;p.style.display='block';document.getElementById('fstat').innerText='✅ Photo ready for bridge!';}; r.readAsDataURL(f);
 }
-function doRegister(){
-  let name=document.getElementById('regName').value.trim();
-  let phone=document.getElementById('regPhone').value.trim().replace(/\s/g,'');
-  let loc=document.getElementById('regLoc').value.trim();
-  let role=document.getElementById('regRole').value;
-  let code=document.getElementById('regCode').value.trim();
-  let msg=document.getElementById('regMsg');
-  if(!name||name.length<2){msg.style.background='#fee2e2';msg.style.color='#b91c1c';msg.innerText='❌ Enter REAL Full Name - e.g. Bethwel Kipruto';return;}
-  if(!phone||phone.length<8){msg.style.background='#fee2e2';msg.style.color='#b91c1c';msg.innerText='❌ Enter REAL WhatsApp - e.g. 0746612256';return;}
-  if(!loc){msg.style.background='#fee2e2';msg.style.color='#b91c1c';msg.innerText='❌ Enter Location - e.g. Moi\'s Bridge, Nakuru';return;}
-  if(!code) code='QGH123456';
-  if(users.find(u=>u.phone===phone)){
-    let ex=users.find(u=>u.phone===phone); current=ex; save();
-    msg.style.background='#dcfce7';msg.style.color='#166534';msg.innerText='✅ Already on bridge as '+ex.role+'! Logged in!';
-    showLogged(); render(); return;
-  }
-  let u={name,phone,loc,role,code,date:new Date().toLocaleDateString()};
-  users.push(u); current=u; save();
-  msg.style.background='#dcfce7';msg.style.color='#166534';msg.innerText='✅ ENTERED BRIDGE as '+role+'! Welcome '+name+'! Now post on bridge!';
-  showLogged(); render();
+function register(){
+let n=document.getElementById('name').value.trim();
+let ph=document.getElementById('phone').value.trim().replace(/\s/g,'');
+let lo=document.getElementById('loc').value.trim();
+let ro=document.getElementById('role').value;
+let co=document.getElementById('code').value.trim();
+let m=document.getElementById('regMsg');
+if(!n||n.length<2){m.style.background='#fee2e2';m.style.color='#991b1b';m.innerText='❌ Enter real full name - e.g. Bethwel Kipruto';return;}
+if(!ph||ph.length<9){m.style.background='#fee2e2';m.style.color='#991b1b';m.innerText='❌ Enter real WhatsApp - e.g. 0746612256';return;}
+if(!lo){m.style.background='#fee2e2';m.style.color='#991b1b';m.innerText='❌ Enter location - e.g. Moi\'s Bridge, Nakuru';return;}
+if(!co) co='QGH123456';
+if(users.find(u=>u.phone==ph)){cur=users.find(u=>u.phone==ph);save();m.style.background='#dcfce7';m.style.color='#166534';m.innerText='✅ Already on bridge as '+cur.role+' - Logged in!';show();render();return;}
+let u={name:n,phone:ph,loc:lo,role:ro,code:co,date:new Date().toLocaleDateString()};
+users.push(u);cur=u;save();
+m.style.background='#dcfce7';m.style.color='#166534';m.innerText='✅ Entered bridge as '+ro+'! Welcome '+n+'! Now post on bridge below.';
+show();render();
 }
-function showLogged(){
-  if(current){
-    document.getElementById('regBox').style.display='none';
-    document.getElementById('loginBox').style.display='block';
-    document.getElementById('postBox').style.display='block';
-    document.getElementById('userDisplay').innerText='Hi, '+current.name+' ('+current.role+') ✓ Bridge';
-    document.getElementById('userInfo').innerHTML='Name: '+current.name+'<br>Role: '+current.role+' on Bridge<br>Phone: '+current.phone+'<br>Location: '+current.loc+'<br>Code: '+current.code+' ✓ Paid 50 KES - On Bridge!';
-  } else {
-    document.getElementById('regBox').style.display='block';
-    document.getElementById('loginBox').style.display='none';
-    document.getElementById('postBox').style.display='none';
-    document.getElementById('userDisplay').innerText='';
-  }
+function show(){
+if(cur){
+document.getElementById('reg').style.display='none';
+document.getElementById('logBox').style.display='block';
+document.getElementById('postBox').style.display='block';
+document.getElementById('userTop').innerText='Hi, '+cur.name+' ('+cur.role+') ✓ On Bridge';
+document.getElementById('uInfo').innerHTML='Name: '+cur.name+'<br>Role on bridge: '+cur.role+'<br>Phone: '+cur.phone+'<br>Location: '+cur.loc+'<br>M-Pesa Code: '+cur.code+' ✓ Paid 50 KES - On Bridge';
+} else {
+document.getElementById('reg').style.display='block';
+document.getElementById('logBox').style.display='none';
+document.getElementById('postBox').style.display='none';
+document.getElementById('userTop').innerText='';
 }
-function doLogout(){current=null;save();showLogged();document.getElementById('regMsg').innerText='';location.reload();}
-function doPost(){
-  if(!current){document.getElementById('postMsg').innerText='❌ Enter bridge first - Register!';return;}
-  let type=document.getElementById('postType').value;
-  let d={id:Date.now(),type,ownerName:current.name,ownerPhone:current.phone,ownerRole:current.role,ownerLoc:current.loc,date:new Date().toLocaleDateString(),image:tempImg,code:current.code};
-  let pMsg=document.getElementById('postMsg');
-  if(type==='crop'){
-    d.title=document.getElementById('c_crop').value.trim();
-    d.qty=document.getElementById('c_qty').value.trim();
-    d.price=document.getElementById('c_price').value.trim();
-    d.loc=document.getElementById('c_loc').value.trim();
-    d.desc=document.getElementById('c_desc').value.trim();
-    if(!d.title||!d.qty||!d.price){pMsg.style.background='#fee2e2';pMsg.style.color='#b91c1c';pMsg.innerText='❌ Fill Crop, Qty, Price - e.g. Maize One acre 40000';return;}
-    if(!tempImg){pMsg.style.background='#fee2e2';pMsg.style.color='#b91c1c';pMsg.innerText='❌ Real photo required for bridge! Tap Choose File above!';return;}
-  } else if(type==='farm'){
-    d.size=document.getElementById('f_size').value.trim();
-    d.price=document.getElementById('f_price').value.trim();
-    d.loc=document.getElementById('f_loc').value.trim();
-    d.titleDeed=document.getElementById('f_title').value.trim();
-    d.desc=document.getElementById('f_desc').value.trim();
-    d.title='FARM '+d.size; d.qty=d.size;
-    if(!d.size||!d.price){pMsg.style.background='#fee2e2';pMsg.style.color='#b91c1c';pMsg.innerText='❌ Fill Farm Size and Price - 5 acres 2000000';return;}
-  } else if(type==='driver'){
-    d.vehicle=document.getElementById('d_vehicle').value.trim();
-    d.route=document.getElementById('d_route').value.trim();
-    d.price=document.getElementById('d_price').value.trim();
-    d.desc=document.getElementById('d_desc').value.trim();
-    d.title=d.vehicle; d.qty=d.vehicle; d.loc=d.route;
-    if(!d.vehicle||!d.route){pMsg.style.background='#fee2e2';pMsg.style.color='#b91c1c';pMsg.innerText='❌ Fill Vehicle and Route';return;}
-  } else if(type==='customer'){
-    d.want=document.getElementById('cu_want').value.trim();
-    d.budget=document.getElementById('cu_budget').value.trim();
-    d.loc=document.getElementById('cu_loc').value.trim();
-    d.desc=document.getElementById('cu_desc').value.trim();
-    d.title=d.want; d.qty=d.want; d.price=d.budget;
-    if(!d.want){pMsg.style.background='#fee2e2';pMsg.style.color='#b91c1c';pMsg.innerText='❌ Fill what you want';return;}
-  }
-  posts.unshift(d); save();
-  tempImg=''; document.getElementById('preview').style.display='none'; document.getElementById('postImage').value=''; document.getElementById('fName').innerText='No file chosen - Tap above!'; document.getElementById('fStatus').innerText='';
-  ['c_crop','c_qty','c_price','c_loc','c_desc','f_size','f_price','f_loc','f_title','f_desc','d_vehicle','d_route','d_price','d_desc','cu_want','cu_budget','cu_loc','cu_desc'].forEach(id=>{let e=document.getElementById(id); if(e) e.value='';});
-  pMsg.style.background='#dcfce7';pMsg.style.color='#166534';pMsg.innerText='✅ POSTED ON BRIDGE as '+type+'! All farmers, customers, markets, transport see you!';
-  render();
 }
-function setFilter(t,btn){
-  filter=t;
-  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  render();
+function logout(){cur=null;save();show();location.reload();}
+function post(){
+if(!cur){document.getElementById('postMsg').innerText='❌ Join bridge first - Register!';return;}
+let t=document.getElementById('ptype').value;
+let d={id:Date.now(),type:t,ownerName:cur.name,ownerPhone:cur.phone,ownerRole:cur.role,date:new Date().toLocaleDateString(),image:tmp,code:cur.code};
+let pm=document.getElementById('postMsg');
+if(t=='crop'){
+d.title=document.getElementById('ccrop').value.trim();
+d.qty=document.getElementById('cqty').value.trim();
+d.price=document.getElementById('cprice').value.trim();
+d.loc=document.getElementById('cloc').value.trim();
+d.desc=document.getElementById('cdesc').value.trim();
+if(!d.title||!d.qty||!d.price){pm.style.background='#fee2e2';pm.style.color='#991b1b';pm.innerText='❌ Fill Crop, Qty, Price - e.g. Maize One acre 40000';return;}
+if(!tmp){pm.style.background='#fee2e2';pm.style.color='#991b1b';pm.innerText='❌ Real photo required! Tap Choose File above!';return;}
+} else if(t=='farm'){
+d.size=document.getElementById('fsize').value.trim();
+d.price=document.getElementById('fprice').value.trim();
+d.loc=document.getElementById('floc').value.trim();
+d.titleDeed=document.getElementById('ftitle').value.trim();
+d.desc=document.getElementById('fdesc').value.trim();
+d.title='FARM '+d.size; d.qty=d.size;
+if(!d.size||!d.price){pm.style.background='#fee2e2';pm.style.color='#991b1b';pm.innerText='❌ Fill Farm Size and Price - e.g. 5 acres 2000000';return;}
+} else if(t=='driver'){
+d.vehicle=document.getElementById('dveh').value.trim();
+d.route=document.getElementById('droute').value.trim();
+d.price=document.getElementById('dprice').value.trim();
+d.desc=document.getElementById('ddesc').value.trim();
+d.title=d.vehicle; d.qty=d.vehicle; d.loc=d.route;
+if(!d.vehicle||!d.route){pm.style.background='#fee2e2';pm.style.color='#991b1b';pm.innerText='❌ Fill Vehicle and Route';return;}
+} else if(t=='customer'){
+d.want=document.getElementById('cuwant').value.trim();
+d.budget=document.getElementById('cubud').value.trim();
+d.loc=document.getElementById('culoc').value.trim();
+d.desc=document.getElementById('cudesc').value.trim();
+d.title=d.want; d.qty=d.want; d.price=d.budget;
+if(!d.want){pm.style.background='#fee2e2';pm.style.color='#991b1b';pm.innerText='❌ Fill what you want';return;}
+}
+posts.unshift(d);save();
+tmp='';document.getElementById('prev').style.display='none';document.getElementById('img').value='';document.getElementById('fname').innerText='No file chosen - Tap above';document.getElementById('fstat').innerText='';
+pm.style.background='#dcfce7';pm.style.color='#166534';pm.innerText='✅ Posted on bridge! All farmers, markets, transport see you - Scroll down!';
+render();
+}
+function setF(t,btn){
+filt=t;
+document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+render();
 }
 function render(){
-  let g=document.getElementById('grid'); g.innerHTML='';
-  let list=filter==='all'?posts:posts.filter(p=>p.type===filter);
-  if(list.length===0){
-    g.innerHTML='<div class="box" style="grid-column:1/-1;text-align:center;border:2px dashed #16a34a"><h3 style="color:#0e2f5a">Bridge Empty - Be First To Cross The Bridge!</h3><p style="font-size:12px;color:#555;margin:8px 0;line-height:1.5">This bridge connects:<br>🌽 Farmer Side: Maize One acre 40000 Nakuru Silage + real photo<br>🏞️ Farm Seller Side: 5 acres Moi\'s Bridge Title Deed 2M Water Electricity<br>🚚 Bridge Pillars: Driver Lorry 7T Nakuru→Nairobi 15000 Available daily<br>🛒 Market Side: Customer I want 100 bags beans Budget 50000<br><br>All need 50 KES to 0746 612 256 to enter bridge - Real WhatsApp!</p></div>';
-    return;
-  }
-  list.forEach(p=>{
-    let colors={crop:'#0a8a2a',farm:'#b45309',driver:'#0e2f5a',customer:'#7c3aed'};
-    let icons={crop:'🌽',farm:'🏞️',driver:'🚚',customer:'🛒'};
-    let title=p.title||p.want||p.vehicle||'Bridge Post';
-    let price=p.price||p.budget||'';
-    let loc=p.loc||p.route||'';
-    let desc=p.desc||'';
-    g.innerHTML+=`<div class="card"><div class="badge" style="background:${colors[p.type]}">${icons[p.type]} ${p.type.toUpperCase()} • ${p.ownerRole}</div>${p.image?`<img src="${p.image}">`:`<div style="height:170px;margin-top:20px;background:#f1f5f9;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:36px">${icons[p.type]}</div>`}<b>${title}</b><div style="font-size:11px;color:#666">${p.qty||p.size||p.vehicle||p.want||''} • ${loc} • ${p.date}</div><div class="price">${price?`KSh ${price}`:''}</div><p style="font-size:11px;color:#555">${desc}<br><span style="font-size:10px;font-weight:700;color:#0e2f5a">By ${p.ownerRole} ${p.ownerName} - ${p.ownerPhone} - On Bridge - Code ${p.code}</span></p><button style="background:#25D366;color:white;width:100%;padding:10px;border:none;border-radius:8px;font-weight:700;margin-top:6px;font-size:11px" onclick="window.open('https://wa.me/254${p.ownerPhone.replace(/^0/,'')}?text=Habari%20${p.ownerName}%20Nimeona%20${title}%20kwenye%20Shamba%20Flow%20Bridge','_blank')">💬 WhatsApp ${p.ownerPhone} - Bridge</button></div>`;
-  });
+let g=document.getElementById('grid'); g.innerHTML='';
+let list=filt=='all'?posts:posts.filter(p=>p.type==filt);
+if(list.length==0){
+g.innerHTML='<div class="box" style="grid-column:1/-1;text-align:center;border:2px dashed #15803d"><h3 style="color:#052e16">Bridge Empty - Be First To Connect Farmers To Markets!</h3><p style="font-size:12px;color:#475569;margin:10px 0;line-height:1.6">🌽 Farmer posts: Maize One acre 40000 Nakuru Selling for silage + real photo<br>🏞️ Farm Seller: 5 acres Moi\'s Bridge Title Deed 2M Water Electricity Road<br>🚚 Driver pillar: Lorry 7T Nakuru→Nairobi 15000 Available daily<br>🏪 Customer/Market: I want 100 bags beans Budget 50000 Nakuru<br><br>All roles on one bridge - WhatsApp direct - No broker - 50 KES M-Pesa 0746 612 256</p></div>';
+return;
 }
-showLogged(); render();
+list.forEach(p=>{
+let icons={crop:'🌽',farm:'🏞️',driver:'🚚',customer:'🏪'};
+let colors={crop:'#15803d',farm:'#b45309',driver:'#0e2f5a',customer:'#7c3aed'};
+let title=p.title||p.want||p.vehicle||'Bridge Post';
+let price=p.price||p.budget||'';
+let loc=p.loc||p.route||'';
+g.innerHTML+=`<div class="card"><div style="position:absolute;top:10px;left:10px;background:${colors[p.type]};color:white;font-size:9px;padding:4px 10px;border-radius:20px;font-weight:800">${icons[p.type]} ${p.type.toUpperCase()} • ${p.ownerRole}</div>${p.image?`<img src="${p.image}">`:`<div style="height:180px;margin-top:24px;background:#f1f5f9;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:36px">${icons[p.type]}</div>`}<b style="font-size:14px">${title}</b><div style="font-size:11px;color:#64748b">${p.qty||p.size||p.vehicle||p.want||''} • ${loc} • ${p.date}</div><div class="price">${price?'KSh '+price:''}</div><p style="font-size:11px;color:#475569;margin-top:4px">${p.desc||''}<br><span style="font-size:10px;font-weight:800;color:#052e16">By ${p.ownerRole} ${p.ownerName} - ${p.ownerPhone} - Code ${p.code}</span></p><button class="btn-green" style="background:#25D366;margin-top:8px" onclick="window.open('https://wa.me/254${p.ownerPhone.replace(/^0/,'')}?text=Habari%20${p.ownerName}%20Nimeona%20${p.title}%20Shamba%20Flow%20Logistics','_blank')">💬 WhatsApp ${p.ownerPhone}</button></div>`;
+});
+}
+show(); render();
 </script>
 </body>
-</html>
+                             </html>
